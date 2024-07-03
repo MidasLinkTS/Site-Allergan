@@ -13,7 +13,7 @@
 			  series: [
 				{
 					name: 'Hoje',
-					data: [10,1288928, 10, 10],
+					data: [640019.24,294575.50, 27779.64, 24456.88],
 					//radius: 12,	
 				}, 
 				{
@@ -81,7 +81,7 @@
 			},
 			xaxis: {
 				
-			  categories: ['M28', 'M29', 'M30', 'M32'],
+			  categories: ['M28', 'M29', 'M13', 'M32'],
 			  labels: {
 			   style: {
 				  colors: '#3e4954',
@@ -146,12 +146,12 @@
 			  series: [
 				{
 					name: 'Hoje',
-					data: [0, 0, 0, 2, 0, 0], //Trocar Dados
+					data: [5, 6, 48, 12, 0, 5], //Trocar Dados
 					//radius: 12,	
 				}, 
 				{
 				  name: 'Ontem',
-				  data: [0, 0, 1, 0, 0, 0] //Trocar Dados
+				  data: [0, 0, 0, 2, 0, 0] //Trocar Dados
 				}, 
 				
 			],
@@ -279,7 +279,7 @@
 							"#ffa755", /* Cor 3*/
 							"#c8c8c8" /* Cor 4*/
 						],
-						data: [66, 33, 10, 10] /* Alterar Dados do Circulo */
+						data: [63, 29, 20, 2] /* Alterar Dados do Circulo */
 					}]
 				},
 				options: {
