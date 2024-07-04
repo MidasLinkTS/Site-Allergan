@@ -6213,6 +6213,22 @@ textarea.form-control {
   background: linear-gradient(to right, #ffa755, #ffa755);
 }
 
+.bg-warning2 {
+  --bs-bg-opacity: 1;
+  background: linear-gradient(to right, #c8c8c8, #c8c8c8);
+}
+
+.bg-warning3 {
+  --bs-bg-opacity: 1;
+  background: linear-gradient(to right, #ff6384, #ff6384);
+}
+
+.bg-warning4 {
+  --bs-bg-opacity: 1;
+  background: linear-gradient(to right, #36a2eb, #36a2eb);
+}
+
+
 .bg-danger {
   --bs-bg-opacity: 1;
   background: linear-gradient(to right, #371f76, #371f76); }
@@ -9452,11 +9468,21 @@ svg.pulse-svg {
       background: #f3f3f3;
       border: 0; 
 }
+.dark-mode .header-right .search-area .form-control {
+  height: 56px;
+  background: #15202B;
+  border: 0; 
+}
     .header-right .search-area .input-group-text {
       height: 56px;
       border-radius: 1rem;
       background: #f3f3f3;
       padding: 0 20px; }
+      .dark-mode .header-right .search-area .input-group-text {
+        height: 56px;
+        border-radius: 1rem;
+        background: #15202B;
+        padding: 0 20px; }
       .header-right .search-area .input-group-text i {
         font-size: 24px; }
     @media only screen and (max-width: 1600px) {
@@ -21105,11 +21131,27 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 .input-group-text {
   background: #d7dae3;
-  border: 0.0625rem solid #f5f5f5;
   min-width: 3.125rem;
   display: flex;
   justify-content: center;
-  padding: 0.532rem 0.75rem; }
+  padding: 0.532rem 0.75rem; 
+  }
+  .input-group-text {
+  background: #d7dae3;
+  min-width: 3.125rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.532rem 0.75rem; 
+  }
+
+  .dark-mode .input-group-text {
+    background: #d7dae3;
+    border: #000000;
+    min-width: 3.125rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.532rem 0.75rem; 
+    }
   .input-group-text i {
     font-size: 1rem; }
 
@@ -22046,6 +22088,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 .noUi-horizontal {
   height: 2px;
+  top: 15px;
   border: 0;
   margin-bottom: 10px; }
 
@@ -22064,7 +22107,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   top: -6px; }
 
 .noUi-horizontal .noUi-handle {
-  top: 1px;
+  top: -7px;
   cursor: pointer; }
 
 html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
@@ -27654,7 +27697,8 @@ table.dataTable.display tbody td {
 
 .card-tabs .nav-tabs {
   width: max-content;
-  border-bottom: 4px solid #f4f5f9; }
+  border-bottom: 4px solid #f4f5f9;
+  border-radius: 3px; }
   .card-tabs .nav-tabs .nav-link {
     border: 0;
     position: relative;
@@ -27667,7 +27711,7 @@ table.dataTable.display tbody td {
       background: var(--primary);
       width: 0px;
       left: 50%;
-      bottom: -4px;
+      bottom: -3px;
       border-radius: 5px;
       transform: translateX(-50%);
       -webkit-transition: all 0.2s;
@@ -31193,4 +31237,15 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
       width: 60px;
       padding-top: 38px;
       
-    }
+    }  #estoque {
+      transition: all 0.5s ease;
+  }
+  .icon-estoque {
+    content: "\e900";
+  }
+.backcpurple-selected {
+    background-color: rgb(111, 66, 193, 0.5); /* Cor roxa */
+    color: white; /* Cor do texto para melhor contraste */
+    border-radius: 30px;
+    text-decoration: none;
+}

@@ -13,12 +13,12 @@
 			  series: [
 				{
 					name: 'Hoje',
-					data: [640019.24,294575.50, 27779.64, 24456.88],
+					data: [482278.96, 115510.31, 83061.59, 21003.40],
 					//radius: 12,	
 				}, 
 				{
 				  name: 'Ontem',
-				  data: [3160, 0, 0, 0]
+				  data: [640019.24, 294575.5, 27779.64, 24456.88]
 				}, 
 				
 			],
@@ -146,12 +146,12 @@
 			  series: [
 				{
 					name: 'Hoje',
-					data: [5, 6, 48, 12, 0, 5], //Trocar Dados
+					data: [18, 6, 110, 20, 0, 6], //Trocar Dados
 					//radius: 12,	
 				}, 
 				{
 				  name: 'Ontem',
-				  data: [0, 0, 0, 2, 0, 0] //Trocar Dados
+				  data: [5, 6, 48, 12, 0, 5] //Trocar Dados
 				}, 
 				
 			],
@@ -266,43 +266,45 @@
 	}
 
 	var polarChart = function(){
-		 var ctx = document.getElementById("polarChart").getContext('2d');
-			Chart.defaults.global.legend.display = false;
-			var myChart = new Chart(ctx, { /* Grafico Circulo */
-				type: 'polarArea',
-				data: {
-					labels: ["Mon", "Tue", "Wed", "Thu"],
-					datasets: [{
-						backgroundColor: [
-							"#371f76", /* Cor 1*/ /* '#38bfb3', '#6610f2' */
-							"#00ffff", /* Cor 2*/
-							"#ffa755", /* Cor 3*/
-							"#c8c8c8" /* Cor 4*/
-						],
-						data: [63, 29, 20, 2] /* Alterar Dados do Circulo */
-					}]
+		var ctx = document.getElementById("polarChart").getContext('2d');
+		Chart.defaults.global.legend.display = false;
+		var myChart = new Chart(ctx, { /* Grafico Circulo */
+			type: 'polarArea',
+			data: {
+				labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // Adicione mais rótulos aqui
+				datasets: [{
+					backgroundColor: [
+						"#371f76", /* Cor 1 */
+						"#00ffff", /* Cor 2 */
+						"#ffa755", /* Cor 3 */
+						"#c8c8c8", /* Cor 4 */
+						"#ff6384", /* Cor 5 */
+						"#36a2eb"  /* Cor 6 */
+					],
+					data: [66, 33, 10, 10, 20, 40] /* Alterar Dados do Circulo */
+				}]
+			},
+			options: {
+				maintainAspectRatio: false,
+				scale: {
+					scaleShowLine: false,
+					display: false,
+					 pointLabels: {
+						fontSize: 0       
+					 },
 				},
-				options: {
-					maintainAspectRatio: false,
-					scale: {
-						scaleShowLine:false,
-						display:false,
-						 pointLabels:{
-							fontSize: 0       
-						 },
-					},
-					tooltips:{
-						enabled:false,
-					}
+				tooltips: {
+					enabled: false,
 				}
-			});
-	}	
-	
+			}
+		});
+	}    
+
 	var handleCard = function(){ 
-		
+	
 		// Vars
-		var reloadButton  = document.querySelector( '.change-btn' );
-		var reloadIcon     = document.querySelector( '.reload' );
+		var reloadButton  = document.querySelector('.change-btn');
+		var reloadIcon     = document.querySelector('.reload');
 		var reloadEnabled = true;
 		var rotation      = 0;
 		// Events
@@ -320,7 +322,7 @@
 		setTimeout(function() {
 		  reloadButton.classList.add('active');
 		}, 1);
-		
+	
 		//Números MPV do Dia
 		var sliderFormat = document.getElementById('slider-format');
 		noUiSlider.create(sliderFormat, {
@@ -351,37 +353,30 @@
 		});
 		//Number formatting ^
 	}
- 
+
 	/* Function ============ */
-		return { 
-			init:function(){
-			},
-			
-			
-			load:function(){
-				
-				chartBar();
-				chartBar2();
-				polarChart();
-				handleCard();
-			},
-			
-			resize:function(){
-			}
+	return { 
+		init:function(){
+		},
+		
+		
+		load:function(){
+			chartBar();
+			chartBar2();
+			polarChart();
+			handleCard();
+		},
+		
+		resize:function(){
 		}
-	
-	}();
+	}
 
-	
-		
-	jQuery(window).on('load',function(){
-		setTimeout(function(){
-			dlabChartlist.load();
-		}, 1000); 
-		
-	});
+}();
 
-
-     
+jQuery(window).on('load',function(){
+	setTimeout(function(){
+		dlabChartlist.load();
+	}, 1000); 
+});
 
 })(jQuery);

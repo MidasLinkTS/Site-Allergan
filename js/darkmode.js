@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         $html.classList.toggle('dark-mode');
         var modeSpan = document.getElementById('modeText');
         var imagem = document.getElementById('logo-abbr');
-            
+
     if (modeSpan.textContent === 'dark_mode') {
         modeSpan.textContent = 'light_mode';
         modeSpan.classList.add('light-mode');
