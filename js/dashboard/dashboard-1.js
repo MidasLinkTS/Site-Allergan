@@ -13,12 +13,12 @@
 			  series: [
 				{
 					name: 'Hoje',
-					data: [482278.96, 115510.31, 83061.59, 21003.40],
+					data: [858053.70, 266751.52, 137088.18, 42748.40],
 					//radius: 12,	
 				}, 
 				{
 				  name: 'Ontem',
-				  data: [640019.24, 294575.5, 27779.64, 24456.88]
+				  data: [482278.96, 115510.31, 83061.59, 21003.40]
 				}, 
 				
 			],
@@ -146,12 +146,12 @@
 			  series: [
 				{
 					name: 'Hoje',
-					data: [18, 6, 110, 20, 0, 6], //Trocar Dados
+					data: [41, 9, 191, 40, 0, 16], //Trocar Dados
 					//radius: 12,	
 				}, 
 				{
 				  name: 'Ontem',
-				  data: [5, 6, 48, 12, 0, 5] //Trocar Dados
+				  data: [18, 6, 110, 20, 0, 6] //Trocar Dados
 				}, 
 				
 			],
@@ -281,7 +281,7 @@
 						"#ff6384", /* Cor 5 */
 						"#36a2eb"  /* Cor 6 */
 					],
-					data: [66, 33, 10, 10, 20, 40] /* Alterar Dados do Circulo */
+					data: [60, 45, 35, 25, 15, 0] /* Alterar Dados do Circulo */
 				}]
 			},
 			options: {
