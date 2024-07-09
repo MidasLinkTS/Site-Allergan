@@ -146,7 +146,7 @@
 			  series: [
 				{
 					name: 'Hoje',
-					data: [73, 27, 285, 46, 0, 24], //Trocar Dados
+					data: [73, 27, 285, 47, 0, 24], //Trocar Dados
 					//radius: 12,	
 				}, 
 				{
